@@ -90,7 +90,7 @@ function flights(req, res) {
                 res.status(400).json({"error": "Flights could not be found"});
                 return;
             }
-            res.json(records);
+            res.json(records.length);
         });
     } catch(err) {
         res.status(400).json({"error": "Something went wrong looking for flights", err: err});
